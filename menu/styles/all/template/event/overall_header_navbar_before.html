@@ -1,0 +1,40 @@
+<div class="container">
+
+<a class="toggleMenu" href="#">Menu</a> <br class="rwd-break" /><br class="rwd-break" />
+<ul class="nav">
+	<li class="test"><a href="https://www.phpbbmodders.com/">Home</a></li>
+	<li class="test"><a href="https://www.phpbbmodders.com/community/">Community</a></li>
+	{% if S_GROUP_528 %}
+	<li>
+		<a href="#">Tools</a>
+		<ul>
+			<li><a href="#">Hash generator</a></li>
+			<li><a href="#">UNIX time converter</a></li>
+			<li><a href="#">Password generater</a></li>
+		</ul>
+	</li>
+	{% endif %}
+	<li>
+		<a href="#">Downloads</a>
+		<ul>
+			<li><a href="https://www.phpbb.com/customise/db/author/phpbbmodders.net/contributions">Our Extensions (Validated)</a></li>
+			<li><a href="https://github.com/phpbbmodders">Our Extensions (repo)</a></li>
+			<li><a href="https://github.com/phpbbmodders-30x-mods">Our Archived MODs (repo)</a></li>
+		</ul>
+	</li>
+	{% if S_GROUP_528 %}
+	<li><a href="#">Pastebin</a></li>
+	{% endif %}
+	<li>
+		<a href="#">About</a>
+		<ul>
+			{% if S_GROUP_528 %}<li><a href="https://www.phpbbmodders.com/community/memberlist.php?mode=team">Team</a></li>{% endif %}
+			<li><a href="https://www.phpbbmodders.com/community/rules">Rules</a></li>
+			{% if S_GROUP_528 %}<li><a href="#">Donate</a></li>{% endif %}
+		</ul>
+	</li>
+	<li><a href="https://www.phpbbmodders.com/community/contactadmin">Contact</a></li>
+</ul>
+</div>
+
+<br class="rwd2-break" />
