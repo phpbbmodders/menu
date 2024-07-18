@@ -11,7 +11,7 @@ a {text-decoration: none;}
 .bbm-menu-toggle {
 	background-color: #812b2b;
 	width: 100%;
-	margin: 0;
+	margin: 10px 0 0;
 	padding: 10px 15px;;
 	display: none;
 	color: #ffffff;
@@ -40,6 +40,7 @@ ul.bbm-menu li {
 ul.bbm-menu {
 	background-color: #812b2b;
 	width: 100%;
+	margin: 10px 0 0;
 	padding: 0 5px;
 	display: flex;
 	align-items: center;
@@ -57,6 +58,7 @@ ul.bbm-menu {
 @media (max-width: 768px) {
 	ul.bbm-menu {
 		border-top: 1px solid #a33838;
+		margin: 0 0 10px;
 		display: none;
 		border-radius: 0;
 	}
