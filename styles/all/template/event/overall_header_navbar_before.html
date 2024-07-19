@@ -18,7 +18,9 @@
 		<ul>
 			<li><a href="https://www.phpbb.com/customise/db/author/phpbbmodders.net/contributions">Our Extensions (Validated)</a></li>
 			<li><a href="https://github.com/phpbbmodders">Our Extensions (repo)</a></li>
+			{% if S_GROUP_528 %}
 			<li><a href="https://github.com/phpbbmodders-30x-mods">Our Archived MODs (repo)</a></li>
+			{% endif %}
 		</ul>
 	</li>
 	{% if S_GROUP_528 %}
@@ -27,12 +29,11 @@
 	<li>
 		<a role="button">About</a>
 		<ul>
-			{% if S_GROUP_528 %}
-				<li><a href="https://www.phpbbmodders.com/community/memberlist.php?mode=team">Team</a></li>
-			{% endif %}
+			<li><a href="https://www.phpbbmodders.com/community/about-us">About US</a></li>
 			<li><a href="https://www.phpbbmodders.com/community/rules">Rules</a></li>
 			<li><a href="https://www.phpbbmodders.com/community/ucp.php?mode=terms">Terms</a></li>
 			<li><a href="https://www.phpbbmodders.com/community/ucp.php?mode=privacy">Privacy</a></li>
+			<li><a href="https://www.phpbbmodders.com/community/memberlist.php?mode=team">Team</a></li>
 			{% if S_GROUP_528 %}
 				<li><a href="#">Donate</a></li>
 			{% endif %}
