@@ -1,12 +1,6 @@
-body, nav, ul, li, a {margin: 0; padding: 0;}
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
-a {text-decoration: none;}
-
-.container {
-	width: 100%;
-	max-width: 1152px;
-	margin: 10px auto;
-}
+/**
+ * menu
+ */
 
 .bbm-menu-toggle {
 	background-color: #812b2b;
@@ -26,7 +20,8 @@ a {text-decoration: none;}
 	}
 }
 
-.bbm-menu * {
+ul.bbm-menu,
+ul.bbm-menu * {
 	box-sizing: border-box;
 }
 
@@ -40,7 +35,7 @@ ul.bbm-menu li {
 ul.bbm-menu {
 	background-color: #812b2b;
 	width: 100%;
-	margin: 10px 0 0;
+	margin: 10px 0;
 	padding: 0 5px;
 	display: flex;
 	align-items: center;
@@ -74,6 +69,7 @@ ul.bbm-menu li a {
 	display: block;
 	position: relative;
 	color: #ffffff;
+	font-size: 12px;
 	font-family: "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
 	text-decoration: none;
 	text-align: left;
@@ -83,7 +79,7 @@ ul.bbm-menu li a {
 ul.bbm-menu li > ul {
 	background-color: #812b2b;
 	width: 100%;
-	min-width: 240px;
+	min-width: 200px;
 	padding: 5px 0;
 	display: none;
 	position: absolute;
@@ -106,7 +102,7 @@ ul.bbm-menu li > ul {
 }
 
 ul.bbm-menu li:has(ul) > a {
-	padding: 10px 32px 10px 15px;
+	padding: 10px 30px 10px 15px;
 }
 
 ul.bbm-menu li:has(ul) > a::after {
