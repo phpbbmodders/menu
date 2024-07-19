@@ -1,140 +1,135 @@
-body, nav, ul, li, a {margin: 0; padding: 0;}
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
-a {text-decoration: none;}
+/**
+ * menu
+ */
 
-.container {
+.bbm-menu-toggle {
+	background-color: #812b2b;
 	width: 100%;
-	max-width: 1152px;
-	margin: 10px auto;
-}
-
-.toggleMenu {
+	margin: 10px 0 0;
+	padding: 10px 15px;;
 	display: none;
-	background: #812b2b;
-	padding: 10px 15px;
-	color: #fff;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
 }
 
-.nav {
+@media (max-width: 768px) {
+	.bbm-menu-toggle {
+		border-bottom: 1px solid #581e1e;
+		display: block;
+	}
+}
+
+ul.bbm-menu,
+ul.bbm-menu * {
+	box-sizing: border-box;
+}
+
+ul.bbm-menu,
+ul.bbm-menu li {
+	margin: 0;
+	padding: 0;
 	list-style: none;
-		*zoom: 1;
-	background: #812b2b;
+}
+
+ul.bbm-menu {
+	background-color: #812b2b;
+	width: 100%;
+	margin: 10px 0;
+	padding: 0 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
 	border-radius: 5px;
 }
 
-.nav:before, .nav:after {
-	content: " ";
-	display: table;
+@media (min-width: 769px) {
+	ul.bbm-menu {
+		display: flex !important;
+	}
 }
 
-.nav:after {
-	clear: both;
+@media (max-width: 768px) {
+	ul.bbm-menu {
+		border-top: 1px solid #a33838;
+		margin: 0 0 10px;
+		display: none;
+		border-radius: 0;
+	}
 }
 
-.nav ul {
-	list-style: none;
-	width: 9em;
+ul.bbm-menu li {
+	position: relative;
 }
 
-.nav a {
+ul.bbm-menu li a {
+	width: 100%;
 	padding: 10px 15px;
-	color: #fff;
-}
-
-.nav li {
-	position: relative;
-}
-
-.nav > li {
-	float: left;
-}
-
-.nav > li > .parent {
-	background-repeat: no-repeat;
-	background-position: right;
-}
-
-.nav > li > a {
 	display: block;
+	position: relative;
+	color: #ffffff;
 	font-size: 12px;
 	font-family: "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
 	text-decoration: none;
+	text-align: left;
+	cursor: pointer;
 }
 
-.nav li ul {
+ul.bbm-menu li > ul {
+	background-color: #812b2b;
+	width: 100%;
+	min-width: 200px;
+	padding: 5px 0;
+	display: none;
 	position: absolute;
-	left: -9999px;
-}
-
-.nav > li.hover > ul {
+	top: 100%;
 	left: 0;
-	width: 215px;
-	font-size: 12px;
-	font-family: "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	z-index: 2;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
-.nav li li.hover ul {
-	left: 100%;
-	top: 0;
-}
-
-.nav li li a {
-	display: block;
-	background: #eeeeee;
-	color: #000;
-	position: relative;
-	z-index: 100;
-	text-decoration: none;
-}
-
-.nav li li a:hover {
-	display: block;
-	background: #dadada;
-	color: #000;
-	position: relative;
-	z-index: 100;
-	text-decoration: none;
-}
-
-.nav li li li a {
-	background: #249578;
-	z-index: 200;
-}
-
-	@media screen and (min-width: 768px) {
-		.rwd-break { display: none; }
-	}
-
-	@media screen and (max-width: 800px) {
-		.rwd2-break { display: none; }
-	}
-
-@media screen and (max-width: 768px) {
-	.site-logo { display: none; }
-	.active {
+@media (max-width: 768px) {
+	ul.bbm-menu li > ul {
+		margin-left: 10px;
+		padding: 0;
 		display: block;
-	}
-
-	.nav > li {
-		float: none;
-	}
-
-	.nav > li > .parent {
-		background-position: 95% 50%;
-	}
-
-	.nav li li .parent {
-		background-repeat: no-repeat;
-		background-position: 95% 50%;
-	}
-
-	.nav ul {
-		display: block;
-		width: 100%;
-	}
-
-	.nav > li.hover > ul, .nav li li.hover ul {
-		position: static;
-		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 }
+
+ul.bbm-menu li:has(ul) > a {
+	padding: 10px 30px 10px 15px;
+}
+
+ul.bbm-menu li:has(ul) > a::after {
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+	width: 6px;
+	height: 6px;
+	display: block;
+	content: '';
+	position: absolute;
+	top: calc(50% - 5px);
+	left: calc(100% - 20px);
+	z-index: 1;
+	transform: rotate(135deg);
+}
+
+@media (max-width: 768px) {
+	ul.bbm-menu li:has(ul) > a::after {
+		display: none;
+	}
+}
+
+ul.bbm-menu li:hover > a {
+	background-color: #6f2424;
+}
+
+ul.bbm-menu li:hover > ul {
+	display: block;
+}
+
