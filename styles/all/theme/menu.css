@@ -10,16 +10,25 @@
 	display: none;
 	color: #ffffff;
 	text-align: center;
+	text-decoration: none;
 	cursor: pointer;
+}
+
+.bbm-menu-toggle:hover,
+.bbm-menu-toggle:active {
+	color: #ffffff;
+	text-decoration: underline;
 }
 
 @media (max-width: 768px) {
 	.bbm-menu-toggle {
 		border-bottom: 1px solid #581e1e;
+		margin: 0 0 10px;
 		display: block;
 	}
 }
 
+.bbm-menu-toggle,
 ul.bbm-menu,
 ul.bbm-menu * {
 	box-sizing: border-box;
@@ -53,7 +62,7 @@ ul.bbm-menu {
 @media (max-width: 768px) {
 	ul.bbm-menu {
 		border-top: 1px solid #a33838;
-		margin: 0 0 10px;
+		margin: -10px 0 10px;
 		display: none;
 		border-radius: 0;
 	}
@@ -92,6 +101,7 @@ ul.bbm-menu li > ul {
 
 @media (max-width: 768px) {
 	ul.bbm-menu li > ul {
+		width: calc(100% - 10px);
 		margin-left: 10px;
 		padding: 0;
 		display: block;
