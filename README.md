@@ -1,23 +1,21 @@
-# modders_menu
+# phpBB Modders Menu
+
+The site navigation menu used on phpbbmodders.com.
 
 ## Installation
 
-Copy the extension to phpBB/ext/modders/menu
+Copy the extension to `phpBB/ext/phpbbmodders/menu`.
 
-Go to "ACP" > "Customise" > "Extensions" and enable the "modders_menu" extension.
+Go to "ACP" > "Customise" > "Extensions" and enable the "phpBB Modders Menu" extension.
 
-## Tests and Continuous Integration
+### Upgrading from `modders/menu`
 
-We use Travis-CI as a continuous integration server and phpunit for our unit testing. See more information on the [phpBB development wiki](https://wiki.phpbb.com/Unit_Tests).
-To run the tests locally, you need to install phpBB from its Git repository. Afterwards run the following command from the phpBB Git repository's root:
+This extension was previously published as `modders/menu`. To switch:
 
-Windows:
-
-    phpBB\vendor\bin\phpunit.bat -c phpBB\ext\modders\menu\phpunit.xml.dist
-
-others:
-
-    phpBB/vendor/bin/phpunit -c phpBB/ext/modders/menu/phpunit.xml.dist
+1. Disable the old "modders_menu" extension in the ACP (do not delete its data; it has none).
+2. Delete the `phpBB/ext/modders/menu` folder.
+3. Upload this version to `phpBB/ext/phpbbmodders/menu` and enable it. The old extension's leftover record is removed automatically.
+4. Purge the board cache (ACP > General > Purge the cache).
 
 ## License
 
