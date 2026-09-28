@@ -1,7 +1,7 @@
 {
     "name": "phpbbmodders/menu",
     "type": "phpbb-extension",
-    "description": "Homepage menu",
+    "description": "A simple dropdown navigation menu for your board; the links are edited by hand in the template.",
     "homepage": "https://www.phpbbmodders.com/",
     "version": "1.0.0-dev",
     "time": "2024-05-11",
