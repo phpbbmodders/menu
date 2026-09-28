@@ -23,6 +23,8 @@ A simple dropdown navigation menu for your board; the links are edited by hand i
 3. Enable the **phpBB Modders Menu** extension
 4. Edit the links in `styles/all/template/event/overall_header_navbar_before.html` and purge the board cache
 
+Examples for adding links, dropdowns, and entries for logged-in users or single groups are in the wiki: [Editing the menu](https://github.com/phpbbmodders/menu/wiki/Editing-the-menu) and [Group Switches](https://github.com/phpbbmodders/menu/wiki/Group-Switches).
+
 ### Upgrading from `modders/menu`
 
 This extension was previously published as `modders/menu`. To switch:
