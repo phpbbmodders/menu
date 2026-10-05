@@ -21,13 +21,23 @@ class ext extends \phpbb\extension\base
 	const OLD_EXT_NAME = 'modders/menu';
 
 	/**
+	 * Refuse to enable below the minimum phpBB and PHP versions.
+	 *
 	 * Refuse to enable while the old copy is still enabled, otherwise both
 	 * would add the menu to every page.
 	 *
-	 * @return bool|array True if enableable, otherwise an array of reasons
+	 * @return bool|string|array True if enableable, otherwise a reason string or array of reasons
 	 */
 	public function is_enableable()
 	{
+		if (!$this->check_phpbb_version() || !$this->check_php_version())
+		{
+			$language = $this->container->get('language');
+			$language->add_lang('install_menu', 'phpbbmodders/menu');
+
+			return $language->lang('MENU_NOT_ENABLEABLE');
+		}
+
 		$ext_manager = $this->container->get('ext.manager');
 
 		if ($ext_manager->is_enabled(self::OLD_EXT_NAME))
@@ -36,6 +46,26 @@ class ext extends \phpbb\extension\base
 		}
 
 		return true;
+	}
+
+	/**
+	 * Require phpBB 3.3.19
+	 *
+	 * @return bool
+	 */
+	public function check_phpbb_version()
+	{
+		return phpbb_version_compare(PHPBB_VERSION, '3.3.19', '>=');
+	}
+
+	/**
+	 * Require PHP 7.4
+	 *
+	 * @return bool
+	 */
+	public function check_php_version()
+	{
+		return PHP_VERSION_ID >= 70400;
 	}
 
 	/**
