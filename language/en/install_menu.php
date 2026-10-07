@@ -39,4 +39,5 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, [
 	'MENU_NOT_ENABLEABLE'	=> 'phpBB Modders Menu could not be enabled. The minimum requirements of phpBB 3.3.19 and/or PHP 7.4.0 were not satisfied.',
+	'MENU_DISABLE_OLD'	=> 'Disable the old “%s” extension first.',
 ]);
