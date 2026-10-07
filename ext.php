@@ -42,7 +42,10 @@ class ext extends \phpbb\extension\base
 
 		if ($ext_manager->is_enabled(self::OLD_EXT_NAME))
 		{
-			return ['Disable the old "' . self::OLD_EXT_NAME . '" extension first.'];
+			$language = $this->container->get('language');
+			$language->add_lang('install_menu', 'phpbbmodders/menu');
+
+			return $language->lang('MENU_DISABLE_OLD', self::OLD_EXT_NAME);
 		}
 
 		return true;
