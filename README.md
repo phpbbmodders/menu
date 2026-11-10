@@ -14,7 +14,7 @@ A simple dropdown navigation menu for your board; the links are edited by hand i
 ## Requirements
 
 - phpBB 3.3.19 or later
-- PHP 7.4 or later
+- PHP 8.1 or later
 
 ## Installation
 
